@@ -27,6 +27,9 @@ struct Person {
             Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
             Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
             Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
+            Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
+            Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
+            Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
             Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail())
         ]
     }
@@ -34,40 +37,40 @@ struct Person {
 
 class DataManager {
         
-    static var names = ["Lora", "Max", "Jack", "John", "Fill", "Kate", "Ness", "Alex", "Tony", "Klar"]
-    static var secondNames = ["Smith", "Stark", "Kim", "Mactavish", "Lourens", "Fooler", "Whatson", "Holms", "Banner", "Ten"]
-    static var phones = ["8900_100_2020", "8900_200_3030", "8900_300_4040", "8900_400_5050", "8900_500_6060", "8900_600_7070", "8900_700_8080", "8900_800_9090", "8900_900_1010", "8900_000_2020"]
-    static var emails = ["@gm.com", "@gm.com", "@gm.com", "@gm.com", "@gm.com", "@gm.com", "@gm.com", "@gm.com", "@gm.com", "@gm.com"]
+    static var names = ["Lora", "Max", "Jack", "John", "Fill", "Kate", "Ness", "Alex", "Tony", "Klar", "Kira", "Anton", "Klark"]
+    static var secondNames = ["Smith", "Stark", "Kim", "Mactavish", "Lourens", "Fooler", "Whatson", "Holms", "Banner", "Ten", "Kent", "Heller", "Foilen"]
+    static var phones = ["89011002020", "89022003030", "89033004040", "89044005050", "89055006060", "89066007070", "89077008080", "89088009090", "89099001010", "89100002020", "89201112222", "89302223344", "89401112220"]
+    static var emails = ["22@gm.com", "11@gm.com", "33@gm.com", "55@gm.com", "44@gm.com", "66@gm.com", "77@gm.com", "99@gm.com", "88@gm.com", "10@gm.com", "20@gm.com", "30@gm.com", "40@gm.com"]
     
     static func getUniqueName() -> String {
-        var uniqueName: String!
+        var uniqueName = ""
         if names.count != 0 {
         uniqueName = names.remove(at: Int.random(in: 0...names.count - 1))
         }
-        return uniqueName ?? ""
+        return uniqueName
     }
     
     static func getUniqueSecondName() -> String {
-        var uniqueSecondName: String!
+        var uniqueSecondName = ""
         if secondNames.count != 0 {
         uniqueSecondName = secondNames.remove(at: Int.random(in: 0...secondNames.count - 1))
         }
-        return uniqueSecondName ?? ""
+        return uniqueSecondName
     }
     
     static func getUniquePhone() -> String {
-        var uniquePhone: String!
+        var uniquePhone = ""
         if phones.count != 0 {
         uniquePhone = phones.remove(at: Int.random(in: 0...phones.count - 1))
         }
-        return uniquePhone ?? ""
+        return uniquePhone
     }
     
     static func getUniqueEmail() -> String {
-        var uniqueEmail: String!
+        var uniqueEmail = ""
         if emails.count != 0 {
         uniqueEmail = emails.remove(at: Int.random(in: 0...emails.count - 1))
         }
-        return uniqueEmail ?? ""
+        return uniqueEmail
     }
 }

@@ -13,8 +13,18 @@ class ContactListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        postDataToFullContactView()
     }
-
+    
+    private func postDataToFullContactView() {
+        guard let tabBarViewControllers = tabBarController?.viewControllers else { return }
+        for viewControlles in tabBarViewControllers {
+            if let fullContactView = viewControlles as? FullContactListViewController {
+                fullContactView.persons = persons
+            }
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

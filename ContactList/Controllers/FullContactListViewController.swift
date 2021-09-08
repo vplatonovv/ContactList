@@ -9,11 +9,7 @@ import UIKit
 
 class FullContactListViewController: UITableViewController {
     
-    private var persons = Person.getPersons()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    var persons: [Person]!
 
     // MARK: - Table view data source
 
@@ -22,7 +18,7 @@ class FullContactListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -32,13 +28,20 @@ class FullContactListViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let phoneСell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath)
-        var contentPhone = phoneСell.defaultContentConfiguration()
-        let person = persons[indexPath.row]
-        contentPhone.text = person.phone
-        contentPhone.secondaryText = person.email
-        phoneСell.contentConfiguration = contentPhone
-        return phoneСell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        let person = persons[indexPath.section]
+        
+        if indexPath.row == 0 {
+            content.text = person.phone
+            content.image = UIImage(systemName: "phone")
+        } else {
+            content.text = person.email
+            content.image = UIImage(systemName: "mail")
+        }
+
+        cell.contentConfiguration = content
+        return cell
     }
 }
 
