@@ -36,7 +36,7 @@ class FullContactListViewController: UITableViewController {
             content.text = person.phone
             content.image = UIImage(systemName: "phone")
         } else {
-            content.text = person.email
+            content.text = "\(person.name)\(person.email)"
             content.image = UIImage(systemName: "mail")
         }
 
