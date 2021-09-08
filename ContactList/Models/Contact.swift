@@ -12,78 +12,62 @@ struct Person {
     var secondName: String
     var phone: String
     var email: String
-    
     var fullName: String {
         return "\(name) \(secondName)"
     }
     
     static func getPersons() -> [Person] {
-
-        return [
-            Person(name: dataManager.names.randomElement() ?? "", secondName: dataManager.secondNames.randomElement() ?? "", phone: dataManager.phones.randomElement() ?? "", email: dataManager.emails.randomElement() ?? ""),
-            Person(name: dataManager.names.randomElement() ?? "", secondName: dataManager.secondNames.randomElement() ?? "", phone: dataManager.phones.randomElement() ?? "", email: dataManager.emails.randomElement() ?? ""),
-            Person(name: dataManager.names.randomElement() ?? "", secondName: dataManager.secondNames.randomElement() ?? "", phone: dataManager.phones.randomElement() ?? "", email: dataManager.emails.randomElement() ?? ""),
-            Person(name: dataManager.names.randomElement() ?? "", secondName: dataManager.secondNames.randomElement() ?? "", phone: dataManager.phones.randomElement() ?? "", email: dataManager.emails.randomElement() ?? ""),
-            Person(name: dataManager.names.randomElement() ?? "", secondName: dataManager.secondNames.randomElement() ?? "", phone: dataManager.phones.randomElement() ?? "", email: dataManager.emails.randomElement() ?? ""),
-            Person(name: dataManager.names.randomElement() ?? "", secondName: dataManager.secondNames.randomElement() ?? "", phone: dataManager.phones.randomElement() ?? "", email: dataManager.emails.randomElement() ?? ""),
-            Person(name: dataManager.names.randomElement() ?? "", secondName: dataManager.secondNames.randomElement() ?? "", phone: dataManager.phones.randomElement() ?? "", email: dataManager.emails.randomElement() ?? ""),
-            Person(name: dataManager.names.randomElement() ?? "", secondName: dataManager.secondNames.randomElement() ?? "", phone: dataManager.phones.randomElement() ?? "", email: dataManager.emails.randomElement() ?? ""),
-            Person(name: dataManager.names.randomElement() ?? "", secondName: dataManager.secondNames.randomElement() ?? "", phone: dataManager.phones.randomElement() ?? "", email: dataManager.emails.randomElement() ?? ""),
-            Person(name: dataManager.names.randomElement() ?? "", secondName: dataManager.secondNames.randomElement() ?? "", phone: dataManager.phones.randomElement() ?? "", email: dataManager.emails.randomElement() ?? "")
+        [
+            Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
+            Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
+            Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
+            Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
+            Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
+            Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
+            Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
+            Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
+            Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail()),
+            Person(name: DataManager.getUniqueName(), secondName: DataManager.getUniqueSecondName(), phone: DataManager.getUniquePhone(), email: DataManager.getUniqueEmail())
         ]
     }
 }
 
 class DataManager {
+        
+    static var names = ["Lora", "Max", "Jack", "John", "Fill", "Kate", "Ness", "Alex", "Tony", "Klar"]
+    static var secondNames = ["Smith", "Stark", "Kim", "Mactavish", "Lourens", "Fooler", "Whatson", "Holms", "Banner", "Ten"]
+    static var phones = ["8900_100_2020", "8900_200_3030", "8900_300_4040", "8900_400_5050", "8900_500_6060", "8900_600_7070", "8900_700_8080", "8900_800_9090", "8900_900_1010", "8900_000_2020"]
+    static var emails = ["@gm.com", "@gm.com", "@gm.com", "@gm.com", "@gm.com", "@gm.com", "@gm.com", "@gm.com", "@gm.com", "@gm.com"]
     
-    var names = [
-        "Stephan",
-        "Jack",
-        "Lola",
-        "Sebastian",
-        "Kate",
-        "Lusi",
-        "Anna",
-        "John",
-        "Fill",
-        "Jaden"
-    ]
-    var secondNames = [
-        "Makalen",
-        "Smith",
-        "Osponse",
-        "Klarens",
-        "Nil",
-        "Spenser",
-        "Oldridge",
-        "Kim",
-        "Lourens",
-        "Heets"
-    ]
-    var phones = [
-        "8-900-235-22-44",
-        "8-955-534-10-60",
-        "8-990-190-90-00",
-        "8-920-822-42-24",
-        "8-910-657-10-64",
-        "8-930-490-47-84",
-        "8-960-876-29-04",
-        "8-950-675-61-41",
-        "8-999-135-45-22",
-        "8-980-935-20-56"
-    ]
-    var emails = [
-        "www@gm.com",
-        "qqq@gm.com",
-        "eee@gm.com",
-        "sss@gm.com",
-        "xxx@gm.com",
-        "hhh@gm.com",
-        "ttt@gm.com",
-        "jjj@gm.com",
-        "aaa@gm.com",
-        "mmm@gm.com"
-    ]
+    static func getUniqueName() -> String {
+        var uniqueName: String!
+        if names.count != 0 {
+        uniqueName = names.remove(at: Int.random(in: 0...names.count - 1))
+        }
+        return uniqueName ?? ""
+    }
+    
+    static func getUniqueSecondName() -> String {
+        var uniqueSecondName: String!
+        if secondNames.count != 0 {
+        uniqueSecondName = secondNames.remove(at: Int.random(in: 0...secondNames.count - 1))
+        }
+        return uniqueSecondName ?? ""
+    }
+    
+    static func getUniquePhone() -> String {
+        var uniquePhone: String!
+        if phones.count != 0 {
+        uniquePhone = phones.remove(at: Int.random(in: 0...phones.count - 1))
+        }
+        return uniquePhone ?? ""
+    }
+    
+    static func getUniqueEmail() -> String {
+        var uniqueEmail: String!
+        if emails.count != 0 {
+        uniqueEmail = emails.remove(at: Int.random(in: 0...emails.count - 1))
+        }
+        return uniqueEmail ?? ""
+    }
 }
-
-let dataManager = DataManager()

@@ -25,10 +25,8 @@ class ContactListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "smallListCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         let person = persons[indexPath.row]
-        
         content.text = person.fullName
         cell.contentConfiguration = content
-        
         return cell
     }
     
