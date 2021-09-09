@@ -4,9 +4,10 @@ Work with UITableView. Create a simple contact list with two views and model for
 Приложение состоит из трех экранов.
 
 Первые два находятся в стеке с NavigationController и TabBarController.
-![Image alt]<(https://github.com/viacheslavplatonov/ContactList/raw/main/People1.png) width = 500>
+![Image alt](https://github.com/viacheslavplatonov/ContactList/raw/main/People1.png)
 ![Image alt](https://github.com/viacheslavplatonov/ContactList/raw/main/Details.png)
-![Image alt](https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png)
+
 Реализована передача данных у первого экрана.
+![Image alt](https://github.com/viacheslavplatonov/ContactList/raw/main/People2.png)
 
 Модель данных из которых берется информация захардкожена.
