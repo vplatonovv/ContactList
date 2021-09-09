@@ -32,6 +32,5 @@ class ContactListViewController: UITableViewController {
         let person = persons[indexPath.row]
         detailVC.person = person
     }
-    
 }
 

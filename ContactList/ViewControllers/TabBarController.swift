@@ -22,6 +22,4 @@ class TabBarController: UITabBarController {
         contactListView.persons = persons
         fullContactListView.persons = persons
     }
-    
-    
 }
