@@ -22,8 +22,8 @@ class FullContactListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let section = persons[section]
-        return section.fullName
+        let person = persons[section]
+        return person.fullName
     }
 
     

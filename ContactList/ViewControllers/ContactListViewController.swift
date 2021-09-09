@@ -16,19 +16,10 @@ class ContactListViewController: UITableViewController {
         postDataToFullContactView()
     }
     
-    private func postDataToFullContactView() {
-        guard let tabBarViewControllers = tabBarController?.viewControllers else { return }
-        for viewControlles in tabBarViewControllers {
-            if let fullContactView = viewControlles as? FullContactListViewController {
-                fullContactView.persons = persons
-            }
-        }
-    }
-    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return persons.count
+        persons.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,4 +38,15 @@ class ContactListViewController: UITableViewController {
         detailVC.person = person
     }
 
+}
+
+extension ContactListViewController {
+    private func postDataToFullContactView() {
+        guard let tabBarViewControllers = tabBarController?.viewControllers else { return }
+        for viewControlles in tabBarViewControllers {
+            if let fullContactView = viewControlles as? FullContactListViewController {
+                fullContactView.persons = persons
+            }
+        }
+    }
 }
