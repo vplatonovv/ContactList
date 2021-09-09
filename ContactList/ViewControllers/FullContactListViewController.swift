@@ -10,13 +10,13 @@ import UIKit
 class FullContactListViewController: UITableViewController {
     
     var persons: [Person]!
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         persons.count
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
@@ -25,7 +25,7 @@ class FullContactListViewController: UITableViewController {
         let person = persons[section]
         return person.fullName
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath)
@@ -39,7 +39,7 @@ class FullContactListViewController: UITableViewController {
             content.text = "\(person.name)\(person.email)"
             content.image = UIImage(systemName: "mail")
         }
-
+        
         cell.contentConfiguration = content
         return cell
     }

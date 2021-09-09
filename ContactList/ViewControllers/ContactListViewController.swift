@@ -9,19 +9,14 @@ import UIKit
 
 class ContactListViewController: UITableViewController {
     
-    private var persons = Person.getPersons()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        postDataToFullContactView()
-    }
+    var persons: [Person]!
     
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         persons.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "smallListCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
@@ -37,16 +32,6 @@ class ContactListViewController: UITableViewController {
         let person = persons[indexPath.row]
         detailVC.person = person
     }
-
+    
 }
 
-extension ContactListViewController {
-    private func postDataToFullContactView() {
-        guard let tabBarViewControllers = tabBarController?.viewControllers else { return }
-        for viewControlles in tabBarViewControllers {
-            if let fullContactView = viewControlles as? FullContactListViewController {
-                fullContactView.persons = persons
-            }
-        }
-    }
-}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		952996A826EA7C2100F6A770 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952996A726EA7C2100F6A770 /* DataManager.swift */; };
+		952996AB26EA806A00F6A770 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952996AA26EA806A00F6A770 /* TabBarController.swift */; };
 		958CDF5726E777D5004DD926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958CDF5626E777D5004DD926 /* AppDelegate.swift */; };
 		958CDF5926E777D5004DD926 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958CDF5826E777D5004DD926 /* SceneDelegate.swift */; };
 		958CDF5E26E777D5004DD926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958CDF5C26E777D5004DD926 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		952996A726EA7C2100F6A770 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		952996AA26EA806A00F6A770 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		958CDF5326E777D5004DD926 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958CDF5626E777D5004DD926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		958CDF5826E777D5004DD926 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		952996A926EA7C2C00F6A770 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				952996A726EA7C2100F6A770 /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		958CDF4A26E777D5004DD926 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +77,7 @@
 				958CDF5626E777D5004DD926 /* AppDelegate.swift */,
 				958CDF5826E777D5004DD926 /* SceneDelegate.swift */,
 				958CDF7326E7A763004DD926 /* ViewControllers */,
+				952996A926EA7C2C00F6A770 /* Services */,
 				958CDF7226E7A755004DD926 /* Models */,
 				958CDF7426E7A76F004DD926 /* Storyboards */,
 				958CDF5F26E777D6004DD926 /* Assets.xcassets */,
@@ -84,6 +97,7 @@
 		958CDF7326E7A763004DD926 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				952996AA26EA806A00F6A770 /* TabBarController.swift */,
 				958CDF6A26E77828004DD926 /* ContactListViewController.swift */,
 				958CDF6C26E7787E004DD926 /* FullContactListViewController.swift */,
 				958CDF6E26E77A81004DD926 /* DetailViewController.swift */,
@@ -171,8 +185,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				958CDF7126E77B5F004DD926 /* Contact.swift in Sources */,
+				952996AB26EA806A00F6A770 /* TabBarController.swift in Sources */,
 				958CDF6D26E7787E004DD926 /* FullContactListViewController.swift in Sources */,
 				958CDF5726E777D5004DD926 /* AppDelegate.swift in Sources */,
+				952996A826EA7C2100F6A770 /* DataManager.swift in Sources */,
 				958CDF6F26E77A81004DD926 /* DetailViewController.swift in Sources */,
 				958CDF5926E777D5004DD926 /* SceneDelegate.swift in Sources */,
 				958CDF6B26E77828004DD926 /* ContactListViewController.swift in Sources */,
