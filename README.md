@@ -9,6 +9,6 @@
 
 Первые два экрана находятся в стеке TabBarController, который находится в UINavigationController.
 
-![Image alt](https://github.com/viacheslavplatonov/ContactList/raw/main/ContactList.png)
+![Image alt](https://github.com/viacheslavplatonov/ContactList/raw/main/СontactList.png)
 
 От первого экрана реализована передача данных на дополнительный экран DetailViewController (через segue)
