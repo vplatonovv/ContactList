@@ -1,8 +1,14 @@
 # ContactList (home work)
 Работа с UITableView.
 Суть задания была создать 2 таблицы которые отображают данные (из модели).
+Модель данных хардкодится по условию:
+- создать модель данных со всеми необходимыми свойствами
+- для хранения данных создать отдельный класс и поместить в него 4 массива
+- для создания экземпляра модели использовать рандомные значения из массивов
+- все значения должны быть уникальными
+
 Первые два экрана находятся в стеке TabBarController, который находится в UINavigationController.
-![Image alt](https://github.com/viacheslavplatonov/ContactList/raw/main/people1.png)
-![Image alt](https://github.com/viacheslavplatonov/ContactList/raw/main/details.png)
+
+![Image alt](https://github.com/viacheslavplatonov/ContactList/raw/main/ContactList.png)
+
 От первого экрана реализована передача данных на дополнительный экран DetailViewController (через segue)
-![Image alt](https://github.com/viacheslavplatonov/ContactList/raw/main/people2.png)
