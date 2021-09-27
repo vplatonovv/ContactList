@@ -27,8 +27,8 @@ class DataManager {
     let emails = ["22@gm.com", "11@gm.com", "33@gm.com", "55@gm.com",
                   "44@gm.com", "66@gm.com", "77@gm.com", "99@gm.com",
                   "88@gm.com", "10@gm.com", "20@gm.com", "30@gm.com", "40@gm.com"]
-    
-    private init() {}
+        
+    private init () {}
     
 }
 
